@@ -1,0 +1,4 @@
+.table-product {
+    display:flex;
+    flex-direction: column;
+}
