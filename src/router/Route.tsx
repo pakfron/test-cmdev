@@ -7,6 +7,7 @@ import {
 import LoginPage from "../pages/LoginPage";
 import HomePage from "../pages/HomePage";
 import DetailPage from "../pages/DetailPage";
+import Login from "../feature/Login";
 
 const routers = createBrowserRouter([
   {
@@ -15,8 +16,16 @@ const routers = createBrowserRouter([
     children: [
       { path: "/", element: <Navigate to={"/login"} /> },
       { path: "/home", element: <HomePage /> },
-      { path: "/login", element: <LoginPage /> },
+      {
+        path: "/login",
+        element: (
+          <Login>
+            <LoginPage />
+          </Login>
+        ),
+      },
       { path: "/product/:productId", element: <DetailPage /> },
+      { path: "*", element: <Navigate to={"/login"} /> },
     ],
   },
 ]);

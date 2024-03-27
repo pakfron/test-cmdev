@@ -1,6 +1,8 @@
-import axios, { AxiosError, all } from "axios";
+import  { AxiosError } from "axios";
 import React, { useEffect, useState } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
+import axios from '../config/axios';
+
 export interface typeProduct {
   id: number;
   title: string;
